@@ -7,7 +7,7 @@ app.get('/',function(req,res){
     res.sendFile(__dirname+"/public/index.html");
 })
 
-var hserver=app.listen(8080,()=>{
+var hserver=app.listen(process.env.port||8080,()=>{
     console.log("Server is listening on port 8080");
 })
 
